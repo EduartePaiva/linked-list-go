@@ -25,8 +25,7 @@ func main() {
 
 	lst := head
 	for i := 1; i < 26; i++ {
-		new_lst := new(List[string])
-		new_lst.val = string(('A' + byte(i)))
+		new_lst := createList(string(('A' + byte(i))))
 		lst.next = new_lst
 		lst = lst.next
 	}
