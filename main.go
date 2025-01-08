@@ -14,10 +14,9 @@ func (lst *List[T]) String() string {
 	return fmt.Sprintf("{val: %v, next: %s}", lst.val, lst.next)
 }
 func createList[E any](val E) *List[E] {
-	newList := new(List[E])
-	newList.val = val
-
-	return newList
+	new_lst := new(List[E])
+	new_lst.val = val
+	return new_lst
 }
 
 func main() {
