@@ -17,9 +17,15 @@ func (lst *List[T]) String() string {
 	return fmt.Sprintf("{val: %v, next: %s}", lst.val, lst.next)
 }
 
+func createList[E any](val E) *List[E] {
+	newList := new(List[E])
+	newList.val = val
+
+	return newList
+}
+
 func main() {
-	head := new(List[string])
-	head.val = "A"
+	head := createList("A")
 
 	lst := head
 	for i := 1; i < 26; i++ {
